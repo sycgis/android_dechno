@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+        "spec": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:adirtyshame/cordova-plugin-device-sensor-fusion.git",
+          "sshUrl": "git+ssh://git@github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+          "httpsUrl": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+          "gitUrl": "git://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+          "shortcut": "github:adirtyshame/cordova-plugin-device-sensor-fusion",
+          "directUrl": "https://raw.githubusercontent.com/adirtyshame/cordova-plugin-device-sensor-fusion/master/package.json"
+        }
+      },
+      "C:\\android\\DECHNO\\node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+  "_id": "cordova-plugin-device-sensor-fusion@0.0.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-device-sensor-fusion",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+    "spec": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:adirtyshame/cordova-plugin-device-sensor-fusion.git",
+      "sshUrl": "git+ssh://git@github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+      "httpsUrl": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+      "gitUrl": "git://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+      "shortcut": "github:adirtyshame/cordova-plugin-device-sensor-fusion",
+      "directUrl": "https://raw.githubusercontent.com/adirtyshame/cordova-plugin-device-sensor-fusion/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git#1a3ed28c5115c57f0b4cc6d5fabc4e30b8f90355",
+  "_shasum": "f8b95fe25ac41b8b9db692377c24083b04c9b0f9",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git",
+  "_where": "C:\\android\\DECHNO\\node_modules",
+  "author": {
+    "name": "Thomas Ames"
+  },
+  "bugs": {
+    "url": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-device-sensor-fusion",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Use Sensor-Fusion for more stable sensor data on Android. Based on a Alexander Pachas Master Thesis \"Sensor fusion for robust outdoor Augmented Reality tracking on mobile devices\".",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=3.6.0"
+    }
+  ],
+  "gitHead": "1a3ed28c5115c57f0b4cc6d5fabc4e30b8f90355",
+  "homepage": "https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "fusion"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-device-sensor-fusion",
+  "optionalDependencies": {},
+  "readme": "[![npm version](https://badge.fury.io/js/cordova-plugin-device-sensor-fusion.svg)](http://badge.fury.io/js/cordova-plugin-device-sensor-fusion)\r\n\r\n# cordova-plugin-device-sensor-fusion\r\n\r\nA cordova plugin using sensor fusion to offer more precise orientation data.\r\nIt is based on a work of Alexander Pacha (https://bitbucket.org/apacha/sensor-fusion-demo).\r\n\r\nDEMO:\r\nhttps://github.com/adirtyshame/threecordova\r\n\r\nAccess is via a global `navigator.fusion` object.\r\n\r\nAlthough the object is attached to the global scoped `navigator`, it is not available until after the `deviceready` event.\r\n\r\n    document.addEventListener(\"deviceready\", onDeviceReady, false);\r\n    function onDeviceReady() {\r\n        console.log(navigator.fusion);\r\n    }\r\n\r\n## Installation\r\n\r\nInstall via cordova CLI:\r\n\r\n    cordova plugin add https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git\r\n\r\n## Supported Platforms\r\n\r\n- Android\r\n\r\n## Methods\r\n\r\n- navigator.fusion.setMode\r\n- navigator.fusion.getCurrentSensorFusion\r\n- navigator.fusion.watchSensorFusion\r\n- navigator.fusion.clearWatch\r\n\r\n### navigator.fusion.setMode\r\n\r\nSet the operation-mode for the plugin. \r\n\r\n    navigator.fusion.setMode(success, err, mode);\r\n\r\nAvailable modes are (from '0' to '5'):\r\n\r\n- __0__: Improved Orientation Sensor 1 (Sensor fusion of Android Rotation Vector and Calibrated Gyroscope - less stable but more accurate)\r\n- __1__: Improved Orientation Sensor 2 (Sensor fusion of Android Rotation Vector and Calibrated Gyroscope - more stable but less accurate)\r\n- __2__: Android Rotation Vector (Kalman filter fusion of Accelerometer + Gyroscope + Compass)\r\n- __3__: Calibrated Gyroscope (Separate result of Kalman filter fusion of Accelerometer + Gyroscope + Compass)\r\n- __4__: Gravity + Compass\r\n- __5__: Accelerometer + Compass\r\n\r\n#### Example\r\n\r\n    function success(result) {\r\n        alert('new Mode: ' + result);\r\n    };\r\n\r\n    function err(error) {\r\n        alert('Error: ' + error);\r\n    };\r\n    \r\n    // Set operation mode to 'Android Rotation Vector'\r\n    navigator.fusion.setMode(onSuccess, onError, 2);\r\n\r\n### navigator.fusion.getCurrentSensorFusion\r\n\r\nGet the current sensor fusion. The result is returned via a `FusionResult`\r\nobject using the `fusionSuccess` callback function.\r\n\r\n    navigator.fusion.getCurrentSensorFusion(fusionSuccess, fusionError);\r\n\r\n#### Example\r\n\r\n    function onSuccess(result) {\r\n        alert('x: ' + result.x);\r\n    };\r\n\r\n    function onError(error) {\r\n        alert('FusionError: ' + error.code);\r\n    };\r\n\r\n    navigator.fusion.getCurrentSensorFusion(onSuccess, onError);\r\n    \r\n### navigator.fusion.watchSensorFusion\r\n\r\nGets the device's current sensor fusion data at a regular interval. Each time the data\r\nis retrieved, the `fusionSuccess` callback function is executed.\r\n\r\nThe returned watch ID references the sensor fusion watch interval. The watch\r\nID can be used with `navigator.fusion.clearWatch` to stop watching the navigator.fusion.\r\n\r\n    var watchID = navigator.fusion.watchSensorFusion(fusionSuccess, fusionError, [fusionOptions]);\r\n\r\n`fusionOptions` may contain the following keys:\r\n\r\n- __frequency__: How often to retrieve the sensor fusion data in milliseconds. _(Number)_ (Default: 100)\r\n\r\n#### Example\r\n\r\n    function onSuccess(result) {\r\n        var element = document.getElementById('result');\r\n        element.innerHTML = 'Result.x: ' + result.x;\r\n    };\r\n\r\n    function onError(fusionError) {\r\n        alert('Fusion error: ' + fusionError.code);\r\n    };\r\n\r\n    var options = {\r\n        frequency: 3000\r\n    }; // Update every 3 seconds\r\n\r\n    var watchID = navigator.fusion.watchSensorFusion(onSuccess, onError, options);\r\n    \r\n## navigator.fusion.clearWatch\r\n\r\nStop watching the sensor fusion referenced by the watch ID parameter.\r\n\r\n    navigator.fusion.clearWatch(watchID);\r\n\r\n- __watchID__: The ID returned by `navigator.fusion.watchSensorFusion`.\r\n\r\n### Example\r\n\r\n    var watchID = navigator.fusion.watchSensorFusion(onSuccess, onError, options);\r\n\r\n    // ... later on ...\r\n\r\n    navigator.fusion.clearWatch(watchID);\r\n\r\n## FusionResult\r\n\r\nA `FusionResult` object is returned to the `fusionSuccess` callback function.\r\n\r\n### Properties\r\n\r\n- __FusionResult.__ (ATTENTION: will be deprecated soon)\r\n  * __x__: The x-component of the resulting quaternion. _(Number)_\r\n  * __y__: The y-component of the resulting quaternion. _(Number)_\r\n  * __z__: The z-component of the resulting quaternion. _(Number)_\r\n  * __w__: The w-component of the resulting quaternion. _(Number)_\r\n\r\n- __FusionResult.quaternion.__\r\n  * __x__: The x-component of the resulting quaternion. _(Number)_\r\n  * __y__: The y-component of the resulting quaternion. _(Number)_\r\n  * __z__: The z-component of the resulting quaternion. _(Number)_\r\n  * __w__: The w-component of the resulting quaternion. _(Number)_\r\n\r\n- __FusionResult.eulerAngles.__\r\n  * __yaw__: The Euler-Angles yaw component. _(Number)_\r\n  * __pitch__: The Euler-Angles pitch component. _(Number)_\r\n  * __roll__: The Euler-Angles roll component. _(Number)_\r\n\r\n- __FusionResult.timestamp__: The time at which the data was determined.  _(milliseconds)_\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adirtyshame/cordova-plugin-device-sensor-fusion.git"
+  },
+  "version": "0.0.3"
+}

@@ -1,0 +1,152 @@
+cordova.define('cordova/plugin_list', function(require, exports, module) {
+module.exports = [
+    {
+        "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
+        "id": "cordova-plugin-device-motion.Acceleration",
+        "pluginId": "cordova-plugin-device-motion",
+        "clobbers": [
+            "Acceleration"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
+        "id": "cordova-plugin-device-motion.accelerometer",
+        "pluginId": "cordova-plugin-device-motion",
+        "clobbers": [
+            "navigator.accelerometer"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-motion/src/browser/AccelerometerProxy.js",
+        "id": "cordova-plugin-device-motion.AccelerometerProxy",
+        "pluginId": "cordova-plugin-device-motion",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-device-sensor-fusion/www/FusionResult.js",
+        "id": "cordova-plugin-device-sensor-fusion.FusionResult",
+        "pluginId": "cordova-plugin-device-sensor-fusion",
+        "clobbers": [
+            "FusionResult"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-sensor-fusion/www/FusionError.js",
+        "id": "cordova-plugin-device-sensor-fusion.FusionError",
+        "pluginId": "cordova-plugin-device-sensor-fusion",
+        "clobbers": [
+            "FusionError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-sensor-fusion/www/fusion.js",
+        "id": "cordova-plugin-device-sensor-fusion.fusion",
+        "pluginId": "cordova-plugin-device-sensor-fusion",
+        "clobbers": [
+            "navigator.fusion"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/src/browser/Vibration.js",
+        "id": "cordova-plugin-vibration.Vibration",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "id": "cordova-plugin-screen-orientation.screenorientation",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+        "id": "cordova-plugin-device-orientation.CompassError",
+        "pluginId": "cordova-plugin-device-orientation",
+        "clobbers": [
+            "CompassError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+        "id": "cordova-plugin-device-orientation.CompassHeading",
+        "pluginId": "cordova-plugin-device-orientation",
+        "clobbers": [
+            "CompassHeading"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+        "id": "cordova-plugin-device-orientation.compass",
+        "pluginId": "cordova-plugin-device-orientation",
+        "clobbers": [
+            "navigator.compass"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device-orientation/src/browser/CompassProxy.js",
+        "id": "cordova-plugin-device-orientation.CompassProxy",
+        "pluginId": "cordova-plugin-device-orientation",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-ping/www/ping.js",
+        "id": "cordova-plugin-ping.ping",
+        "pluginId": "cordova-plugin-ping",
+        "clobbers": [
+            "Ping"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "pluginId": "cordova-plugin-inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/src/browser/InAppBrowserProxy.js",
+        "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
+        "pluginId": "cordova-plugin-inappbrowser",
+        "runs": true
+    },
+    {
+        "file": "plugins/cz.blocshop.socketsforcordova/socket.js",
+        "id": "cz.blocshop.socketsforcordova.Socket",
+        "pluginId": "cz.blocshop.socketsforcordova",
+        "clobbers": [
+            "window.Socket"
+        ]
+    }
+];
+module.exports.metadata = 
+// TOP OF METADATA
+{
+    "cordova-plugin-whitelist": "1.3.2",
+    "cordova-plugin-device-motion": "1.2.5",
+    "cordova-plugin-device-sensor-fusion": "0.0.3",
+    "cordova-plugin-console": "1.0.7",
+    "cordova-plugin-vibration": "2.1.5",
+    "cordova-plugin-screen-orientation": "2.0.1",
+    "cordova-plugin-device-orientation": "1.0.7",
+    "cordova-plugin-ping": "0.3.1",
+    "cordova-plugin-inappbrowser": "1.7.1",
+    "cz.blocshop.socketsforcordova": "1.1.0"
+}
+// BOTTOM OF METADATA
+});

@@ -41,7 +41,8 @@ function onDeviceReady() {
         console.log("--------------------- DeviceOrientation is supported");
     }
     console.log(navigator.compass);
-    
+    console.log("----------- Manage power  --------------");
+	window.powermanagement.acquire();
 
 
 

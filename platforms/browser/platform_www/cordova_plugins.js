@@ -132,6 +132,14 @@ module.exports = [
         "clobbers": [
             "window.Socket"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -146,7 +154,8 @@ module.exports.metadata =
     "cordova-plugin-device-orientation": "1.0.7",
     "cordova-plugin-ping": "0.3.1",
     "cordova-plugin-inappbrowser": "1.7.1",
-    "cz.blocshop.socketsforcordova": "1.1.0"
+    "cz.blocshop.socketsforcordova": "1.1.0",
+    "cordova-plugin-powermanagement": "1.0.5"
 }
 // BOTTOM OF METADATA
 });

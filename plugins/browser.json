@@ -36,6 +36,9 @@
         },
         "cz.blocshop.socketsforcordova": {
             "PACKAGE_NAME": "dechno.app"
+        },
+        "cordova-plugin-powermanagement": {
+            "PACKAGE_NAME": "dechno.app"
         }
     },
     "dependent_plugins": {}

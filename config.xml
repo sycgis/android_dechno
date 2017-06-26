@@ -30,4 +30,5 @@
     <plugin name="cordova-plugin-ping" spec="~0.3.1" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
     <plugin name="cz.blocshop.socketsforcordova" spec="~1.1.0" />
+    <plugin name="cordova-plugin-powermanagement" spec="~1.0.5" />
 </widget>

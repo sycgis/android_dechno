@@ -31,6 +31,7 @@ console.log("---------- WAITING FOR DEVICE --------------");
 //
 function onDeviceReady() {
     console.log("---------------- DEVICE READY ------------------");
+	
     startWatch();
     screen.orientation.lock('landscape').then(function success() {
         console.log("---------------- Successfully locked the orientation");
@@ -41,7 +42,8 @@ function onDeviceReady() {
         console.log("--------------------- DeviceOrientation is supported");
     }
     console.log(navigator.compass);
-    
+    console.log("----------- Manage power  --------------");
+	window.powermanagement.acquire();
 
 
 

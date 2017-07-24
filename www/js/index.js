@@ -31,6 +31,7 @@ console.log("---------- WAITING FOR DEVICE --------------");
 //
 function onDeviceReady() {
     console.log("---------------- DEVICE READY ------------------");
+	
     startWatch();
     screen.orientation.lock('landscape').then(function success() {
         console.log("---------------- Successfully locked the orientation");

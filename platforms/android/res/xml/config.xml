@@ -32,12 +32,9 @@
         <param name="android-package" value="com.simplec.phonegap.plugins.powermanagement.PowerManagement" />
     </feature>
     <name>DECHNO</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
+    <description>Dechno - Rapi Application</description>
+    <author email="dechno@dechno.ch" href="http://www.dechno.ch">Dechno</author>
+    <icon src="www/icon.png" />
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

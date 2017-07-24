@@ -63,7 +63,19 @@
         <div id="MysqlStatus"></div>
         <div id="deviceready">
             
-               
+                <table width="40" height="300" align="center">
+                    <tr width="100%" align="center">
+                        <td></td>
+                        <td><div id="heading"></div></td>
+                        <td rowspan="2"><input type="range" name="vert" id="vert" data-vertical="true" value="0" min="-20" max="20" /></td>  
+                    </tr>
+                    <tr width="100%" align="center">
+                        <td valign="top"><br><!-- <input height="20" type="button" value="" id="RapiView">--><input type="button" value="INFO" onclick="RapiInfo();"><br><input id="start" type="button" value="start" onclick=StartClick('kjhlh');><br><!-- <input type="button" id="reset" value="reset">--><br><br><br><input type="button" value="exit" onclick=exitFromApp();></td>
+                        <td><img id="showdms_0" src="http://192.168.1.111/dms.jpg?1" height="272" width="480"></td>
+                        <td></td>
+                                        
+                    </tr>                 
+                </table>
 
             
         </div>
@@ -71,7 +83,16 @@
     <div id="speed"></div> 
     <div id="debug"></div> 
 
-    
+    <script type="text/javascript">
+        setInterval(function () {
+            var myImageElement = document.getElementById('showdms_0');
+            myImageElement.src = 'http://192.168.1.111/dms.jpg?rand=' + Math.random();
+        }, 500);
+        app.initialize();
+
+        
+
+    </script>
     <div id="ori"></div>
 </body>
 </html>
